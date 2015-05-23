@@ -20,5 +20,6 @@ function loading() {
         .attr({x:0, y:232, w:640, h: 20})
         .css({"text-align": "center"})
         .textFont({size: "20px"})
-        .textColor("white");
+        .textColor("white")
+        .text("Loading...");
 }
