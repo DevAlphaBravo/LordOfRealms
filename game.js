@@ -9,6 +9,10 @@ window.onload = function() {
     Crafty.scene("loading", function() {
         loading();
     });
+
+    Crafty.scene("main", function() {
+        main();
+    });
     Crafty.scene("loading");
 }
 
@@ -22,4 +26,15 @@ function loading() {
         .textFont({size: "20px"})
         .textColor("white")
         .text("Loading...");
+
+    var assets = [
+        "assets/sprite.png"
+        ];
+    Crafty.load(assets,function() {
+        Crafty.scene("main");
+    });
+}
+
+function main() {
+    alert("Loaded.");
 }
