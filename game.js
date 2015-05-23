@@ -36,5 +36,20 @@ function loading() {
 }
 
 function main() {
-    alert("Loaded.");
+    loadMap();
+}
+
+function loadMap() {
+    loadMapData(map);
+}
+
+function loadMapData(map) {
+    (aObj=new XMLHttpRequest()).open("GET","maps/"+map+"/"+map+".map",true);
+    aObj.send();
+    aObj.onreadystatechange=function() {
+        if(aObj.readyState == 4) {
+            SOURCE = eval("("+aObj.responseText+")");
+            alert(aObj.responseText);
+        }
+    }
 }
