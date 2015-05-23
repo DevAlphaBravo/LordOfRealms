@@ -53,7 +53,8 @@ function loadMapData(map) {
 function drawMap() {
     Crafty.e("2D, Canvas, TiledMapBuilder").setMapDataSource(SOURCE).createWorld(function(map) {
         for(i=0;i<map.getEntitiesInLayer("Collision").length;i++) {
-            alert(i);
+            map.getEntitiesInLayer("Collision")
+                .addComponent("HitBox");
         }
     });
 }
