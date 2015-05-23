@@ -45,7 +45,13 @@ function loadMapData(map) {
     aObj.onreadystatechange=function() {
         if(aObj.readyState == 4) {
             SOURCE = eval("("+aObj.responseText+")");
-            alert(aObj.responseText);
+            drawMap();
         }
     }
+}
+
+function drawMap() {
+    Crafty.e("2D, Canvas, TiledMapBuilder").setMapDataSource(SOURCE).createWorld(function(map) {
+
+    });
 }
