@@ -27,15 +27,11 @@ function loading() {
         .textColor("white")
         .text("Loading...");
 
-    var assets = [
-        "assets/sprite.png"
-        ];
-    Crafty.load(assets,function() {
-        Crafty.scene("main");
-    });
+    setTimeout(function() {Crafty.scene("main");},1000);
 }
 
 function main() {
+    Crafty.background("white");
     loadMap();
 }
 
