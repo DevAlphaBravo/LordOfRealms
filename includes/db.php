@@ -6,7 +6,7 @@ function query($query) {
     $db->define_db("db","../databases/database.data");
     $db->select_db("db");
 
-    $con = $db->query($query);
+    $con = $db->query($query) or die($db->error());
     return $con;
     $db->free_result($con);
 }
