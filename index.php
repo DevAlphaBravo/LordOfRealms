@@ -1,3 +1,15 @@
+<?php
+include "includes/db.php";
+
+$aon = query("SELECT * FROM members WHERE session=:session",array(
+    ":session" => $_COOKIE['session']
+));
+
+if(!isset($_COOKIE['session']) || $aon->rowCount() == 0) {
+    header("Location: /menu");
+    die("");
+}
+?>
 <html>
 <head>
     <title>Lord Of Realms</title>
