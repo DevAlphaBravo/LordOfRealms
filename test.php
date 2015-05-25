@@ -1,6 +1,6 @@
 <?php
 include "includes/db.php";
 
-query("SELECT * FROM members",null);
+$aon = query("SELECT * FROM members",null)
 
 ?>

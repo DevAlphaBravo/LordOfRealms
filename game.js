@@ -1,4 +1,4 @@
-var map = "map-0";
+var map = "";
 var SOURCE;
 
 window.onload = function() {
@@ -33,15 +33,6 @@ function loading() {
 function main() {
     Crafty.background("white");
     loadMap();
-
-    confirm = confirm("Do you want to load the new map?");
-
-    if(confirm) {
-        setTimeout(function() {
-            map = "map-1";
-            loadMap();
-        },10000);
-    }
 }
 
 function loadMap() {
