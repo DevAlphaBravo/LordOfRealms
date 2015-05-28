@@ -19,8 +19,10 @@
 </style>
 <img src="/images/logo.png" style="width:99%; margin:auto;">
 <br>
-<div style="width:75%; font-size:12px; text-align:center; margin:auto; background:white; padding:10px;">
+<div style="width:75%; font-size:12px; text-align:center; margin:auto; background:white; padding:10px;border:1px outset gray;">
     <form action="login.php" method="post">
-        <input type="text" class="input" style="width:96%;">
+        <input type="text" class="input" style="width:300px;" placeholder="Username"><br>
+        <input type="password" class="input" style="width:300px;" placeholder="Password"><br>
+
     </form>
 </div>
