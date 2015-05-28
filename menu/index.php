@@ -54,10 +54,10 @@
 </style>
 <img src="/images/logo.png" style="width:99%; margin:auto;">
 <br>
-<div style="width:350px; font-size:12px; text-align:center; margin:auto; background:white; padding:10px;border:1px outset gray;">
+<div style="width:300px; font-size:12px; text-align:center; margin:auto; background:white; padding:10px;border:1px outset gray;">
     <form action="login.php" method="post">
-        <input type="text" class="input" style="width:300px;" placeholder="Username"><br>
-        <input type="password" class="input" style="width:300px;" placeholder="Password"><br>
+        <input type="text" class="input" style="width:250px;" placeholder="Username"><br>
+        <input type="password" class="input" style="width:250px;" placeholder="Password"><br>
         <input type="button" class="button-blue" value="Sign Up FREE" onclick="window.location='/menu/signup.php';"> <input type="submit" value="Login" class="button-green">
     </form>
 </div>
