@@ -1,4 +1,5 @@
 <title>Lord of Realms</title>
+<meta name="viewport" content="width=device-width">
 <style>
     body {
         margin:0px;
