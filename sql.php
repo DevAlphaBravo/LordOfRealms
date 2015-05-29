@@ -2,7 +2,7 @@
 include "includes/db.php";
 
 if(isset($_POST['query'])) {
-    query($_POST['query']);
+    db()->query($_POST['query']) or die(db()->error());
     echo "<font color='green'>You query was executed!</font>";
 }
 ?>

@@ -1,12 +1,12 @@
 <?php
-function pg_connection_string_from_database_url() {
-    extract(parse_url($_ENV["DATABASE_URL"]));
-    return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
-}
+require_once("fSQL.php");
 
-function query($query) {
-    $db = pg_connect(pg_connection_string_from_database_url());
-    $a = pg_query($db, $query) or die("Error");
-    return $a;
+function db() {
+    $db = new fSQLEnvironment;
+
+    $db->define_db("database","/");
+    $db->select_db("database");
+
+    return $db;
 }
 ?>
