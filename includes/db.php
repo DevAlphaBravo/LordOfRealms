@@ -7,7 +7,11 @@ function query($query, $array) {
         die($e->getMessage());
     }
 
-    $con = $db->query($query,$array);
+    try {
+        $con = $db->query($query, $array);
+    } catch(Exception $e) {
+        die($e->getMessage());
+    }
     return $con;
 
     $db = null;
