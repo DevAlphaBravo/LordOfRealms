@@ -27,7 +27,7 @@
             document.getElementsByName("characterSelection")[i].style.border = "1px solid black";
         }
 
-        document.getElementById(id).style.border = "1px solid green";
+        document.getElementById(id).style.border = "3px solid green";
 
         document.getElementById("character").value = id;
     }
@@ -46,6 +46,7 @@
         <table style="width:100%; text-align:center;margin:auto;">
             <tr>
                 <td><div id="jeff" name="characterSelection" class="selection" style="background:url(/characters/jeff.png) -36px -96px; width:36px; height:48px;" onclick="selectCharacter(this.id);"></div></td>
+                <td><div id="amia" name="characterSelection" class="selection" style="background:url(/characters/amia.png) -32px 0px; width:32px; height:32px;" onclick="selectCharacter(this.id);"></div></td>
             </tr>
         </table>
     </form>
