@@ -125,7 +125,7 @@ if(isset($_POST['username'])) {
 <div style="width:300px; background:white; text-align:center; font-size:12px; margin:auto; border:1px outset gray;">
     <h1 style="text-shadow:1px 0px 1px #888; color:darkgray;">Sign Up Form</h1>
     <div style="font-size:10px; text-align:center;color:red;"><?php echo $etxt; ?></div>
-    <form action="signup.php" method="post">
+    <form action="/menu/signup.php" method="post">
         <input type="text" class="input" name="username" placeholder="Desired Username"><br>
         <input type="text" class="input" name="email" placeholder="Email Address"><br>
         <input type="password" class="input" name="password" placeholder="Password"><br>
