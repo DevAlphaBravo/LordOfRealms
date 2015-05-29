@@ -6,7 +6,7 @@ if(isset($_COOKIE['session'])) {
 }
 
 function cleanString($txt) {
-    return htmlspecialchars($txt, ENT_QUOTES, 'UTF-8');
+    return htmlspecialchars($txt);
 }
 
 if(isset($_POST['username'])) {
