@@ -1,19 +1,13 @@
 <?php
-function query($query, $array) {
-    $dsn = "mysql:host=mysql4.worldplanethosting.com;dbname=alphaks_lordofrealms";
-    try {
-        $db = new PDO($dsn, "alphaks_admin", "pirate12");
-    } catch(Exception $e) {
-        die($e->getMessage());
-    }
+function pg_connection_string_from_database_url() {
+    extract(parse_url($_ENV["DATABASE_URL"]));
+    return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
+}
 
-    try {
-        $con = $db->query($query, $array);
-    } catch(Exception $e) {
-        die($e->getMessage());
-    }
-    return $con;
+$db = pg_connect(pg_connection_string_from_database_url());
 
-    $db = null;
+function query($query) {
+    $a = pg_query($query) or die("Error");
+    return $a;
 }
 ?>
