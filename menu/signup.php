@@ -16,7 +16,12 @@
         margin-bottom:8px;
         font-family:tahoma, arial, sans-serif;
     }
+    .selection {
+        overflow:hidden;
+        border:1px solid black;
+    }
 </style>
+<br>
 <div style="width:300px; background:white; text-align:center; font-size:12px; margin:auto; border:1px outset gray;">
     <h1 style="text-shadow:1px 0px 1px #888; color:darkgray;">Sign Up Form</h1>
     <div style="font-size:10px; text-align:center;"></div>
@@ -25,5 +30,12 @@
         <input type="text" class="input" name="email" placeholder="Email Address"><br>
         <input type="password" class="input" name="password" placeholder="Password"><br>
         <input type="password" class="input" name="confirm" placeholder="Confirm Password"><br>
+        <input type="hidden" name="character" value="jeff">
+
+        <table style="width:100%; text-align:center;">
+            <tr>
+                <td><div id="jeff" class="selection" style="background:url(/characters/jeff.png) -36px -96px; width:36px; height:48px;"></div></td>
+            </tr>
+        </table>
     </form>
 </div>
