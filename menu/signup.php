@@ -47,13 +47,13 @@ if(isset($_POST['username'])) {
     if($charCheck == false) {
         $etxt = "You did not select a valid character.";
     }
-    die("Works");
     $aon = query("SELECT * FROM members WHERE username=:username",array(
         "username" => $username
     ));
     if($aon->rowCount() > 0) {
         $etxt = "That username has already been taken.";
     }
+    die("Works");
 
     $bon = query("SELECT * FROM members WHERE email=:email",array(
         ":email" => $email
