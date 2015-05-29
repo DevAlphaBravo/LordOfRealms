@@ -4,10 +4,9 @@ function pg_connection_string_from_database_url() {
     return "user=$user password=$pass host=$host dbname=" . substr($path, 1); # <- you may want to add sslmode=require there too
 }
 
-$db = pg_connect(pg_connection_string_from_database_url());
-
 function query($query) {
-    $a = pg_query($query) or die("Error");
+    $db = pg_connect(pg_connection_string_from_database_url());
+    $a = pg_query($db, $query) or die("Error");
     return $a;
 }
 ?>
