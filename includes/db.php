@@ -8,7 +8,7 @@ function query($query, $array) {
     }
 
     try {
-        $con = $db->query($query, $array) or die($db->errorCode());
+        $con = $db->query($query, $array);
     } catch(Exception $e) {
         die($e->getMessage());
     }
