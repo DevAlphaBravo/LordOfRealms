@@ -21,6 +21,17 @@
         border:1px solid black;
     }
 </style>
+<script type="text/javascript">
+    function selectCharacter(id) {
+        for(i=0;i<document.getElementsByName("characterSelection").length;i++) {
+            document.getElementsByName("characterSelection")[i].style.border = "1px solid black";
+        }
+
+        document.getElementById(id).style.border = "1px solid green";
+
+        document.getElementById("character").value = id;
+    }
+</script>
 <br>
 <div style="width:300px; background:white; text-align:center; font-size:12px; margin:auto; border:1px outset gray;">
     <h1 style="text-shadow:1px 0px 1px #888; color:darkgray;">Sign Up Form</h1>
@@ -30,11 +41,11 @@
         <input type="text" class="input" name="email" placeholder="Email Address"><br>
         <input type="password" class="input" name="password" placeholder="Password"><br>
         <input type="password" class="input" name="confirm" placeholder="Confirm Password"><br>
-        <input type="hidden" name="character" value="jeff">
+        <input type="hidden" id="character" name="character" value="jeff">
 
-        <table style="width:100%; text-align:center;">
+        <table style="width:100%; text-align:center;margin:auto;">
             <tr>
-                <td><div id="jeff" class="selection" style="background:url(/characters/jeff.png) -36px -96px; width:36px; height:48px;"></div></td>
+                <td><div id="jeff" name="characterSelection" class="selection" style="background:url(/characters/jeff.png) -36px -96px; width:36px; height:48px;" onclick="selectCharacter(this.id);"></div></td>
             </tr>
         </table>
     </form>
