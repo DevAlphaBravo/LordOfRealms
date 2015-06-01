@@ -12,12 +12,8 @@
     </style>
 </head>
 <body>
-<div class="uk-vertical-align uk-text-center uk-height-1-1">
-    <div class="uk-vertical-align-middle" style="height:300px;">
-        <form class="uk-panel uk-panel-box uk-form">
-            <input type="text" class="uk-form-large" placeholder="Username">
-        </form>
-    </div>
+<div class="uk-height-1-1 uk-width-1-1" style="overflow:hidden;">
+    <img src="/images/bg.png" class="uk-height-1-1 uk-width-1-1" alt="">
 </div>
 </body>
 </html>
