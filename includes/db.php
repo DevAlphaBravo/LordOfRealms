@@ -1,80 +1,75 @@
 <?php
-require_once("xmldb.php");
+$f = array();
+function add($array) {
+    $f[count($f)] = $array;
 
-
-$f[0] = array(
+    return $f;
+}
+add(array(
     "name" => "id",
     "primarykey" => 1,
     "type" => "integer",
     "extra" => "autoincrement"
-);
-
-$f[1] = array(
+));
+add(array(
     "name" => "username",
     "type" => "text"
-);
-$f[2] = array(
-    "name" => "email",
-    "type" => "text"
-);
-$f[3] = array(
+));
+add(array(
     "name" => "password",
     "type" => "text"
-);
-$f[4] = array(
+));
+add(array(
     "name" => "ip",
     "type" => "text"
-);
-$f[5] = array(
+));
+add(array(
     "name" => "sprite",
     "type" => "text"
-);
-$f[6] = array(
+));
+add(array(
     "name" => "x",
     "type" => "integer"
-);
-$f[7] = array(
+));
+add(array(
     "name" => "y",
     "type" => "integer"
-);
-$f[8] = array(
+));
+add(array(
     "name" => "mx",
     "type" => "integer"
-);
-$f[9] = array(
+));
+add(array(
     "name" => "my",
     "type" => "integer"
-);
-$f[10] = array(
-    "name" => "session",
+));
+add(array(
+    "name" => "map",
     "type" => "text"
-);
+));
+add(array(
+    "name" => "color",
+    "defaultvalue" => "white",
+    "type" => "text"
+));
 
 $err = createxmldatabase("database","../");
-echo $err."<br>";
-
-$err = createxmltable("database","members",$f,"../");
-echo $err."<br>";
+$err = createxmltable("database","members","../");
 
 $aon = new XMLTable("database","members","../");
-
 $aonv = array(
-    "username" => "AlphaBravo",
-    "email" => "kyle@staschke.net",
-    "password" => "pirate12",
-    "ip" => "N/A",
-    "sprite" => "jack",
-    "x" => 240,
-    "y" => 150,
-    "mx" => 240,
-    "my" => 150,
-    "session" => "N/A"
+    "username" => "AdminBot",
+    "password" => "apple420",
+    "ip" => "unknown",
+    "sprite" => "jeff",
+    "x" => 250,
+    "y" => 250,
+    "mx" => 250,
+    "my" => 250,
+    "map" => "map-0",
+    "color" => "gold"
 );
+
 $aon->InsertRecord($aonv);
-
-$aon->DelRecord("AlphaBravo");
-
-$db = new XMLDatabase("database","../");
-$aon = $db->Query("SELECT * FROM members");
-print_r($aon);
+echo "Databases Created! Default Stuff Enabled!";
 ?>
