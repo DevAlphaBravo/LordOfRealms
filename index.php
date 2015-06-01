@@ -14,13 +14,11 @@
 <body>
 <div class="uk-height-1-1 uk-width-1-1" style="overflow:hidden;background:url(/images/bg.png);">
     <nav class="uk-navbar">
-        <a href="/" class="uk-navbar-brand"><img src="/images/logo.png" alt="" style="width:20%;"></a>
-        <div class="uk-navbar-flip">
-            <div class="uk-navbar-content">
-                <div class="uk-button-group">
-                    <button class="uk-button-primary" onclick="window.location = '/menu/login.php';">Login</button>
-                    <button class="uk-button-primary" onclick="window.location = '/menu/register.php';">Register</button>
-                </div>
+        <div class="uk-navbar-content"><a href="/"><img src="/images/logo.png" style="width:20%;" alt=""></a></div>
+        <div class="uk-navbar-content uk-navbar-flip uk-hidden-small">
+            <div class="uk-button-group">
+                <a href="/menu/login.php" class="uk-button">Login</a>
+                <a href="/menu/register.php" class="uk-button-primary">Register</a>
             </div>
         </div>
     </nav>
