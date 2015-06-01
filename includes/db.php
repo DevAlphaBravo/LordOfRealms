@@ -45,10 +45,32 @@ $f[9] = array(
     "name" => "my",
     "type" => "integer"
 );
+$f[10] = array(
+    "name" => "session",
+    "type" => "text"
+);
 
 $err = createxmldatabase("database","../");
 echo $err."<br>";
 
-$err = createxmltable("database","database",$f,"../");
+$err = createxmltable("database","members",$f,"../");
 echo $err."<br>";
+
+$aon = new XMLTable("database","members","../");
+
+$aonv = array(
+    "username" => "AlphaBravo",
+    "email" => "kyle@staschke.net",
+    "password" => "pirate12",
+    "ip" => "N/A",
+    "sprite" => "jack",
+    "x" => 240,
+    "y" => 150,
+    "mx" => 240,
+    "my" => 150,
+    "session" => "N/A"
+);
+$insert = $aon->InsertRecord($aonv);
+$records = $aon->GetRecords();
+print_r($records);
 ?>
