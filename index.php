@@ -18,7 +18,7 @@
         <div class="uk-navbar-content uk-navbar-flip uk-hidden-small">
             <div class="uk-button-group">
                 <a href="/menu/login.php" class="uk-button">Login</a>
-                <a href="/menu/register.php" class="uk-button-primary">Register</a>
+                <button class="uk-button-primary" onclick="window.location = '/menu/register.php';">Register</button>
             </div>
         </div>
     </nav>
