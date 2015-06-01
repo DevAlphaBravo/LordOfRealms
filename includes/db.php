@@ -54,7 +54,10 @@ add(array(
 ));
 
 $err = createxmldatabase("database","../");
+echo $err."<br>";
 $err = createxmltable("database","members","../");
+echo $err."<br>";
+
 
 $aon = new XMLTable("database","members","../");
 $aonv = array(
