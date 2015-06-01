@@ -70,7 +70,7 @@ $aonv = array(
     "my" => 150,
     "session" => "N/A"
 );
-$insert = $aon->InsertRecord($aonv);
-$records = $aon->GetRecords();
-print_r($records);
+$aon->InsertRecord($aonv);
+
+$aon->DelRecord("AlphaBravo");
 ?>
