@@ -73,4 +73,8 @@ $aonv = array(
 $aon->InsertRecord($aonv);
 
 $aon->DelRecord("AlphaBravo");
+
+$db = new XMLDatabase("database","../");
+$aon = $db->Query("SELECT * FROM members");
+print_r($aon);
 ?>
