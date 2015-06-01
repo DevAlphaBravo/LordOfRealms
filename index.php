@@ -14,7 +14,7 @@
 <body>
 <div class="uk-height-1-1 uk-width-1-1" style="overflow:hidden;background:url(/images/bg.png);">
     <nav class="uk-navbar">
-        <a href="/" class="uk-navbar-brand"><img src="/images/logo.png" alt="" style="width:45%;"></a>
+        <a href="/" class="uk-navbar-brand"><img src="/images/logo.png" alt="" style="width:10%;"></a>
         <ul class="uk-navbar-nav">
             <li><a href="/">Home</a></li>
         </ul>
