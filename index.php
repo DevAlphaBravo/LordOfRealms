@@ -12,12 +12,12 @@
     </style>
 </head>
 <body>
-<div class="uk-vertical-align-middle uk-text-center" style="width:300px;">
-    <form action="menu/login.php" method="post" class="uk-panel uk-panel-box uk-form">
-        <div class="uk-form-row">
+<div class="uk-vertical-align uk-text-center uk-height-1-1">
+    <div class="uk-vertical-align-middle" style="height:300px;">
+        <form class="uk-panel uk-panel-box uk-form">
             <input type="text" class="uk-form-large" placeholder="Username">
-        </div>
         </form>
     </div>
+</div>
 </body>
 </html>
